@@ -1,0 +1,178 @@
+@use "variable" as v;
+@use "common" as c;
+/*************************************************
+item-list
+*************************************************/
+
+#item-list {
+    .container {
+        margin-bottom: 10rem;
+        display: flex;
+        justify-content: space-between;
+        @include ml {
+            flex-direction: column-reverse;
+            margin: 0 auto 10rem;
+        }
+        .item_wrap {
+            border-top: 1px solid #0051b0;
+            padding-top: 4rem;
+            width: v.pxtovw(960);
+            text-align: center;
+            @include ml {
+                width: 100%;
+            }
+            .item-list {
+                width: 100%;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10rem 2.5rem;
+
+                @include mq {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                li {
+                    min-width: 200px;
+                    max-width: 300px;
+                    @include mq {
+                        min-width: auto;
+                    }
+                    .item_link {
+                        width: 100%;
+                        text-align: left;
+                        &:hover {
+                            opacity: 0.8;
+                            transition: 0.5s;
+                        }
+                    }
+                    .img {
+                        border-radius: 0.5rem;
+                        overflow: hidden;
+                        max-width: 30rem;
+                        max-height: 30rem;
+                        margin-bottom: 1.8rem;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            position: relative;
+                            z-index: -1;
+                        }
+                    }
+                    .cat {
+                        font-size: 1.5rem;
+                        font-weight: v.$meduum;
+                        color: v.$blue;
+                        letter-spacing: 0.17em;
+                        margin-bottom: 0.3rem;
+                        @include mq() {
+                            font-size: 13px;
+                            margin-bottom: 0;
+                        }
+                    }
+                    .product_name {
+                        font-size: 1.6rem;
+                        font-weight: v.$meduum;
+                        color: v.$blue;
+                        letter-spacing: 0.17em;
+                        margin-bottom: 0.3rem;
+                        @include mq() {
+                            font-size: 13px;
+                            margin-bottom: 0;
+                        }
+                    }
+                    .price {
+                        font-size: 1.6rem;
+                        font-weight: v.$meduum;
+                        color: v.$blue;
+                        letter-spacing: 0.17em;
+                        margin-bottom: 1.5rem;
+                        @include mq() {
+                            font-size: 13px;
+                            margin-bottom: 8px;
+                        }
+                    }
+
+                    .cart_btn {
+                        min-width: 200px;
+                        max-width: 300px;
+                        @include mq {
+                            width: 160px;
+                            min-width: auto;
+                        }
+                        &:hover {
+                            transform: translateY(3px);
+                            transition: 0.5s;
+                        }
+                    }
+                    &.hidden {
+                        opacity: 0;
+                        height: 0;
+                        margin: 0;
+                        pointer-events: none;
+                    }
+                }
+            }
+
+            .button {
+                padding: 6.5rem 1.8rem 1rem;
+                font-size: 1.5rem;
+                font-weight: v.$semibold;
+                border-bottom: 1px solid #000;
+            }
+        }
+
+        .item_menu {
+            width: v.pxtovw(238);
+            background-color: #fff;
+            border: 1rem;
+            padding: 3rem;
+            width: 236px;
+            height: fit-content;
+            position: fixed;
+            top: 345px;
+            right: v.pxtovw(95);
+            @include ml {
+                position: static;
+                width: 100%;
+                display: flex;
+                height: auto;
+                margin-bottom: 3rem;
+                border-radius: 0.5rem;
+            }
+            @include mq {
+                padding: 2rem;
+                overflow-x: auto; /* 水平方向のスクロールを有効にする */
+                min-width: 100%;
+            }
+
+            li {
+                margin-bottom: 2rem;
+                width: fit-content;
+                @include ml {
+                    margin: 0 2.3rem 0 0;
+                }
+                @include mq {
+                    white-space: nowrap; /* テキストを折り返さない */
+                }
+                &:last-child {
+                    @include ml {
+                        margin: 0;
+                    }
+                }
+                a {
+                    font-size: 1.6rem;
+                    @include mq {
+                        font-size: 14px;
+                    }
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                &:first-child {
+                    border-bottom: 1px solid;
+                }
+            }
+        }
+    }
+}

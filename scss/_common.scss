@@ -1,0 +1,423 @@
+@use "variable" as v;
+/*************************************************
+common-style
+*************************************************/
+// @import url("https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap");
+@mixin base_width {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1920px;
+}
+// @extendでスタイルの継承
+// @mixinでステイルの定義
+// @includeでmixinの呼び出し
+
+// ブレイクポイント
+// PC基準でコーディングする場合
+$breakpoints: (
+  "sm": "screen and (max-width: 599px)",
+  //スマホ
+  "md": "screen and (max-width: 1024px)",
+  //タブレット
+) !default;
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints , $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin ml($breakpoint: md) {
+  @media #{map-get($breakpoints , $breakpoint)} {
+    @content;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.ie_ObjectFit {
+  object-fit: cover;
+  font-family: "object-fit: cover;";
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 110px;
+  @include mq {
+    font-size: 48%;
+    font-size: min(1rem, 10px); /* 1remは10px以上になる */
+  }
+}
+
+body {
+  scroll-behavior: smooth;
+  font-family: "Zen Old Mincho", serif;
+  font-style: normal;
+  min-height: 100dvh;
+  background-color: v.$base_blue;
+  max-width: 1980px;
+  margin: 0 auto;
+  p {
+    font-weight: 400; //regular
+    color: v.$text-color;
+    font-size: 1.6rem;
+    line-height: 1.9;
+    @include mq {
+      font-size: 14px;
+    }
+  }
+  h2,
+  h3,
+  h4 {
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    line-height: 1.35;
+    @include mq() {
+      line-height: 1.5;
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+// /iOSでのデフォルトスタイルをリセット /
+input[type="submit"],
+input[type="button"] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  border: none;
+  box-sizing: border-box;
+  &::-webkit-search-decoration {
+    display: none;
+  }
+  &:focus {
+    outline-offset: -2px;
+  }
+}
+
+#screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover; /* 動画のアスペクト比を維持しながら全体にフィットさせる */
+  mix-blend-mode: overlay; /* オーバーレイを指定 */
+  pointer-events: none; /* マウスイベントを無視する */
+  @include mq() {
+    width: 300vw;
+    overflow: hidden;
+  }
+}
+
+section {
+  margin-bottom: 7.3rem;
+  @include mq() {
+    margin-bottom: 6rem;
+  }
+}
+
+.inner {
+  width: v.pxtovw(1240);
+  margin: 0 auto;
+  max-width: 1980px;
+  @include ml {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.inner_small {
+  width: v.pxtovw(1161);
+  margin: 0 auto;
+  max-width: 1200px;
+  @include mq {
+    width: 100%;
+  }
+}
+
+.ttl_top {
+  letter-spacing: 0.2em;
+  font-weight: v.$semibold;
+  font-size: 1.5rem;
+}
+
+//下層ページタイトル
+
+.under_ttl {
+  .ttl_under {
+    letter-spacing: 0.2em;
+    font-weight: v.$semibold;
+    font-size: 3.2rem;
+    margin-bottom: 1.8rem;
+    @include mq() {
+      font-size: 2.8rem;
+    }
+  }
+  .ttl_top {
+    margin-bottom: 10rem;
+    @include mq() {
+      margin-bottom: 7rem;
+    }
+  }
+}
+
+.sec_under {
+  padding-top: 17rem;
+  @include mq() {
+    padding-top: 10rem;
+  }
+}
+
+//ボタン
+.cart_btn {
+  display: flex;
+  justify-content: center;
+  background-color: v.$blue;
+  border-radius: 4rem;
+  width: 100%;
+  max-width: 245px;
+  align-items: center;
+  padding: 0.6rem 0;
+  @include mq() {
+    width: 160px;
+    padding: 4px 0;
+  }
+  p {
+    color: #fff;
+    font-weight: v.$semibold;
+    font-size: 1.6rem;
+    @include mq() {
+      font-size: 13px;
+      letter-spacing: 0;
+    }
+  }
+  .icon_svg {
+    width: 2.4rem;
+    margin-right: 1.2rem;
+    fill: #fff;
+    @include mq() {
+      width: 15px;
+      margin-right: 15px;
+    }
+  }
+  &:hover {
+    p {
+      color: v.$base_blue;
+    }
+    opacity: 0.8;
+    transition: 1s;
+  }
+}
+
+//トップのボタン
+.btn {
+  @include mq() {
+    width: fit-content;
+  }
+  a {
+    position: relative;
+    font-size: 1.5rem;
+    color: #000;
+    font-weight: v.$semibold;
+    display: block;
+    border-bottom: 1px solid #000;
+    width: v.pxtovw(111);
+    padding-bottom: 1rem;
+    @include ml() {
+      width: 100px;
+    }
+    @include mq() {
+      width: v.pxtovw_sp(113);
+    }
+    .arrow {
+      position: absolute;
+      top: 1px;
+      right: -3px;
+      left: auto;
+    }
+    &:hover {
+      color: v.$blue;
+      border-bottom: 1px solid v.$blue;
+      opacity: 0.8;
+      transition: 0.5s;
+      .arrow {
+        right: -15px;
+        transition: 0.5s;
+        fill: v.$blue;
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+//ボタンの矢印
+.arrow {
+  // width: 15px;
+  // height: 12px;
+  // fill: #000;
+  position: absolute;
+  .icon_arrow {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.category_under {
+  margin-bottom: 0;
+}
+
+//おすすめ商品
+.recommend_list {
+  max-width: 1980px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  li {
+    width: 16.5%;
+    max-width: 245px;
+    min-width: 180px;
+    margin: 0 v.pxtovw(17) 2rem;
+    @include mq() {
+      min-width: 160px;
+      width: 160px !important;
+    }
+    a {
+      &:hover {
+        opacity: 0.8;
+        transition: 0.5s;
+      }
+    }
+    .item_link {
+      width: 100%;
+      text-align: left;
+    }
+    .img {
+      border-radius: 0.5rem;
+      overflow: hidden;
+      width: 100%;
+      height: 20rem;
+      margin-bottom: 0.7rem;
+      @include mq() {
+        height: 150px;
+        width: 160px;
+        margin: 0 auto;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+        z-index: -1;
+      }
+    }
+    .cat {
+      font-size: 1.5rem;
+      font-weight: v.$meduum;
+      color: v.$blue;
+      letter-spacing: 0.17em;
+      margin-bottom: 0.3rem;
+      @include mq() {
+        font-size: 13px;
+        margin-bottom: 0;
+      }
+    }
+    .product_name {
+      font-size: 1.6rem;
+      font-weight: v.$meduum;
+      color: v.$blue;
+      letter-spacing: 0.17em;
+      margin-bottom: 0.3rem;
+      @include mq() {
+        font-size: 13px;
+        margin-bottom: 0;
+      }
+    }
+    .price {
+      font-size: 1.6rem;
+      font-weight: v.$meduum;
+      color: v.$blue;
+      letter-spacing: 0.17em;
+      margin-bottom: 1.5rem;
+      @include mq() {
+        font-size: 13px;
+        margin-bottom: 8px;
+      }
+    }
+
+    .cart_btn {
+      @include mq() {
+        width: 160px;
+      }
+      &:hover {
+        transform: translateY(3px);
+        transition: 0.5s;
+      }
+    }
+  }
+}
+
+.recommend_wrap {
+  @include mq() {
+    margin: 0 auto 6rem;
+    overflow: auto;
+  }
+  .simplebar-track.simplebar-horizontal {
+    height: 6px;
+    background: #fff;
+    border-radius: 14px;
+    // max-width: 420px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .simplebar-scrollbar {
+    height: 6px;
+    background: #3f3b3a;
+    border-radius: 14px 0 0 14px;
+    top: 0;
+  }
+}
+
+.recommend_list {
+  display: flex;
+  @include mq() {
+    flex-wrap: nowrap;
+    margin: 0 auto 3rem;
+  }
+  li {
+    @include ml() {
+      margin-bottom: 5rem;
+    }
+    @include mq() {
+      width: v.pxtovw_sp(160);
+      margin: 8px;
+    }
+  }
+}
+
+.is_pc {
+  display: block;
+  @include mq() {
+    display: none;
+  }
+}

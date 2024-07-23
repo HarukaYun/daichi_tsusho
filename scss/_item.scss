@@ -1,0 +1,373 @@
+@use "variable" as v;
+@use "common" as c;
+/*************************************************
+item
+*************************************************/
+
+#item_top {
+    position: relative;
+    padding-top: 20rem;
+    @include ml() {
+        padding-top: 10rem;
+    }
+    .item_ctn {
+        display: flex;
+        gap: 0 5.4rem;
+        justify-content: space-between;
+        margin-bottom: 11.2rem;
+        overflow: visible;
+        @include ml() {
+            display: block;
+        }
+        @include mq() {
+            margin-bottom: 5rem;
+        }
+
+        .item_img_wrapper {
+            flex-basis: 49%;
+            position: sticky;
+            position: -webkit-sticky; /*Safari*/
+            top: 20rem;
+            height: 750px;
+            @include ml() {
+                position: static;
+                height: auto;
+                margin-bottom: 5rem;
+            }
+
+            //スライドここから
+            .slider-for {
+                margin-bottom: 10px;
+                width: 60rem;
+                margin-right: 18px;
+                @include ml() {
+                    margin: 0 auto 1rem;
+                }
+                @include mq() {
+                    width: 100%;
+                    margin-right: auto;
+                }
+
+                .p-img-wrapper {
+                    aspect-ratio: 1/1;
+                    overflow: hidden;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+            .slider-nav {
+                .slick-track {
+                    width: 100% !important;
+                    margin-top: 28px;
+                    @include ml() {
+                        width: 90% !important;
+                        margin: 10px auto 0 auto;
+                    }
+                    @include mq() {
+                        width: 100% !important;
+                        margin-top: 10px;
+                    }
+                    .thumb-item {
+                        aspect-ratio: 1/1;
+                        margin-right: 20px;
+                        margin-bottom: 10px;
+                        overflow: hidden;
+                        @include mq() {
+                            margin-right: 10px;
+                        }
+                        .thumb-link {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                    }
+
+                    .slick-slide {
+                        width: 100px !important;
+                        @include mq() {
+                            width: 70px !important;
+                        }
+                    }
+                }
+            }
+            //スライドここまで
+        } //item_img_wrappar
+
+        //右半分
+        .item_ctt {
+            flex-basis: 48%;
+            .item_info_top {
+                border-bottom: 1px solid #000;
+                width: 100%;
+                margin-bottom: 3.7rem;
+                p {
+                    letter-spacing: 0.17em;
+                }
+                .cat {
+                    font-size: 2.2rem;
+                    color: v.$blue;
+                    font-weight: v.$meduum;
+                    margin-bottom: 1.4rem;
+                    @include mq() {
+                        font-size: 14px;
+                        margin-bottom: 0;
+                    }
+                }
+                .product_name {
+                    font-size: 2.4rem;
+                    font-weight: v.$semibold;
+                    color: #220000;
+                    margin-bottom: 2.9rem;
+                    @include mq() {
+                        margin-bottom: 0;
+                    }
+                }
+                .price {
+                    font-size: 2.4rem;
+                    margin-bottom: 4.2rem;
+                    color: #220000;
+                    @include mq() {
+                        margin-bottom: 2rem;
+                    }
+                    .yen {
+                        font-size: 2rem;
+                        margin-right: 5px;
+                    }
+                    .tax {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+
+            .product-quantity {
+                width: 169px;
+                height: 50px;
+                display: flex;
+                border-radius: 1rem;
+                background: #fff;
+                text-align: center;
+                margin-bottom: 3rem;
+                font-size: 2rem;
+                button {
+                    width: 60px;
+                }
+                input {
+                    width: 49px;
+                }
+            }
+
+            .cart_btn {
+                max-width: 350px;
+                margin-bottom: 7.5rem;
+                @include ml() {
+                    margin: 0 auto 7rem;
+                    width: 350px;
+                    padding: 0.8rem;
+                }
+                p {
+                    @include mq() {
+                        font-size: 1.6rem;
+                    }
+                }
+                .icon_svg {
+                    @include mq() {
+                        width: 2.4rem;
+                    }
+                }
+            }
+
+            .ctt_wrap {
+                background-color: #fff;
+                border-radius: 1rem;
+                padding: 3rem;
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                @include mq() {
+                    padding: 1.5rem;
+                }
+                dt {
+                    width: 30%;
+                    padding: 1rem 0.5rem;
+                    margin-bottom: 0px;
+                    border-bottom: 1px solid #000;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    letter-spacing: 0.17em;
+                    display: block;
+                    @include mq() {
+                        padding: 1rem 0;
+                    }
+                }
+
+                dd {
+                    width: 70%;
+                    padding: 1rem 0.5rem;
+                    margin-bottom: 0px;
+                    border-top: 3px solid dotted;
+                    font-size: 1.5rem;
+                    letter-spacing: 0.17em;
+                    display: block;
+                    border-bottom: 1px solid #000;
+                }
+            }
+        }
+
+        .item_exp {
+            margin-bottom: 7.5rem;
+            @include mq() {
+                margin-bottom: 5rem;
+            }
+            p {
+                letter-spacing: 0.17em;
+                font-size: 1.5rem;
+                color: #220000;
+                font-weight: v.$meduum;
+            }
+        }
+
+        .item_info {
+            background-color: #fff;
+            width: 100%;
+            position: relative;
+            padding: 8.7rem 0 8.2rem;
+            margin-bottom: 4rem;
+            .ttl_tab {
+                position: absolute;
+                top: -5.5rem;
+                display: block;
+                background-color: #fff;
+                padding: 1.4rem;
+                border-radius: 1rem 1rem 0 0;
+                width: 17.8rem;
+                text-align: center;
+                font-size: 1.6rem;
+                font-weight: 600;
+            }
+
+            .ctn {
+                display: flex;
+                justify-content: space-between;
+                gap: 7rem 0;
+                @include mq() {
+                    display: block;
+                }
+                .ctt {
+                    flex-basis: calc(584 / 1240 * 100%);
+                    @include mq() {
+                        margin-bottom: 3rem;
+                    }
+                }
+            }
+        } //item_ctt
+    }
+}
+
+#review {
+    margin-bottom: 8rem;
+
+    .ctn {
+        margin: 0 auto;
+        width: 100%;
+        border: 3px red solid;
+        padding: 3rem;
+        text-align: center;
+        p {
+            color: red;
+        }
+    }
+}
+
+#recommended {
+    border-top: 1px solid #000;
+    padding-top: 4rem;
+    @include mq() {
+        border-top: none;
+    }
+    .under_ttl_wrap {
+        display: flex;
+        justify-content: flex-start;
+        gap: 0 2rem;
+        align-items: baseline;
+        margin-bottom: 5rem;
+        @include mq() {
+            display: block;
+            text-align: center;
+            position: relative;
+            &::before {
+                position: absolute;
+                top: -30px;
+                left: 50%;
+                transform: translate(-50%, 0);
+                content: "";
+                display: block;
+                width: 100%;
+                height: 1px;
+                background-color: #000;
+            }
+        }
+        .ttl {
+            font-size: 2.4rem;
+        }
+        .ttl_top {
+            font-size: 13px;
+        }
+    }
+
+    .recommend_list {
+        margin: 0 auto 10rem;
+        // display: flex;
+        @include mq() {
+            margin: 0 auto 3rem;
+            // flex-wrap: nowrap;
+        }
+    }
+
+    // .recommend_wrap {
+    //     @include mq() {
+    //         margin: 0 auto 6rem;
+    //         overflow: auto;
+    //     }
+    //     .simplebar-track.simplebar-horizontal {
+    //         height: 6px;
+    //         background: #fff;
+    //         border-radius: 14px;
+    //         // max-width: 420px;
+    //         margin: 0 auto;
+    //         width: 100%;
+    //     }
+    //     .simplebar-scrollbar {
+    //         height: 6px;
+    //         background: #3f3b3a;
+    //         border-radius: 14px 0 0 14px;
+    //         top: 0;
+    //     }
+    // }
+
+    // .recommend_list {
+    //     margin: 0 auto 10rem;
+    //     display: flex;
+    //     @include mq() {
+    //         margin: 0 auto 3rem;
+    //         flex-wrap: nowrap;
+    //     }
+    //     li {
+    //         @include ml() {
+    //             margin-bottom: 5rem;
+    //         }
+    //         @include mq() {
+    //             width: v.pxtovw_sp(160);
+    //             margin: 8px;
+    //         }
+    //     }
+    // }
+}

@@ -1,0 +1,113 @@
+@use "variable" as v;
+@use "common" as c;
+/*************************************************
+company / transaction / policy
+*************************************************/
+
+.p-terms_wrap {
+    margin-bottom: 10rem;
+    max-width: 1200px;
+    .inner {
+        padding-top: 100px;
+        @include c.mq(sm) {
+            padding-top: 60px;
+        }
+    }
+    table {
+        width: 100%;
+        margin: 0 auto;
+        border-collapse: separate;
+        @include c.mq(sm) {
+            border-spacing: 10px 0;
+        }
+        tr {
+            &:first-of-type {
+                th {
+                    padding-top: 0;
+                }
+                td {
+                    padding-top: 0;
+                }
+            }
+            th {
+                width: 22%;
+                font-size: 1.8rem;
+                letter-spacing: 0.17em;
+                padding: 2rem 0 2rem 16px;
+                border-bottom: 1px solid #000;
+                @include c.mq(sm) {
+                    width: 25%;
+                    font-size: 14px;
+                    padding: 15px 0;
+                }
+            }
+
+            td {
+                font-size: 1.6rem;
+                letter-spacing: 0.17em;
+                line-height: 1.5;
+                padding: 2rem 0 2rem 8px;
+                border-bottom: 1px solid #000;
+                @include c.mq(sm) {
+                    font-size: 14px;
+                    padding: 15px 0 15px 8px;
+                }
+                span {
+                    color: red;
+                }
+            }
+        }
+    }
+}
+
+/*************************************************
+policy プライバシーポリシー
+*************************************************/
+
+.p-policy_wrap {
+    margin-bottom: 10rem;
+    max-width: 1200px;
+
+    .inner {
+        div {
+            &:nth-of-type(14) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .policy-wrap {
+        margin-bottom: 5rem;
+        max-width: 1200px;
+        @include c.mq(sm) {
+            margin-bottom: 60px;
+        }
+        h3 {
+            font-size: 1.8rem;
+            letter-spacing: 0.17em;
+            font-weight: 600;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #000;
+        }
+        .box {
+            p {
+                font-size: 1.5rem;
+                letter-spacing: 0.17em;
+                line-height: 2;
+                margin-bottom: 25px;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+                a {
+                    border-bottom: 1px solid #000;
+                    width: fit-content;
+                    @include c.mq(sm) {
+                        max-width: 315px;
+                        word-wrap: break-word;
+                    }
+                }
+            }
+        }
+    }
+}
