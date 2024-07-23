@@ -1,51 +1,6 @@
 
 $(document).ready(function(){
 
-  ///スマホヘッダーここから
-  //sp
-//   $(function(){
-//     // ハンバーガーメニュー開閉とリンククリック時のナビゲーション制御
-
-//     // JavaScriptで#navが.activeの時に#nav_fix_iconを非表示にする
-//     function updateNavFixIconVisibility() {
-//         var nav = document.getElementById("nav_sp");
-//         var navFixIcon = document.getElementById("nav_fix_icon_sp");
-        
-//         if (nav && navFixIcon && nav.classList.contains("active")) {
-//             navFixIcon.style.display = "none";
-//         }
-//         else {
-//           navFixIcon.style.display = "block"; // .active クラスがない場合、表示する
-//       }
-        
-//     }
-
-
-//     $("#hamb_sp, #menu_text").on("click", function() {
-//       $("#hamb_sp span").toggleClass("active");
-//       $("#nav_sp").toggleClass("active");
-
-//       if ($("#nav_sp").hasClass("active")) {
-//           $("#menu_text").text("閉じる");
-//       } else {
-//           $("#menu_text").text("メニュー");
-//       }
-
-//       updateNavFixIconVisibility(); // メニュー状態が変わったら非表示を更新
-//   });
-
-//     $('a[href*="#"]').on('click', function() {  
-//       $('#nav_sp').removeClass('active');
-//       $("#hamb_sp span").removeClass("active");
-//       $("#menu_text").text("メニュー");
-//       updateNavFixIconVisibility(); // メニュー状態が変わったら非表示を更新
-//   });
-
-
-// });
-
-
-
 
 //-------------------------------------- 
 //下層ページSPヘッダー
@@ -129,19 +84,18 @@ $('.slider-nav').slick({
 });
 
 
+
 AOS.init({
     duration: 1000,
     easing: 'ease',
   });
 
 
+  var moreNum = 3;
 
-var rellax = new Rellax('.rellax', {
-});
-
-
-
-var moreNum = 9;
+  if (moreNum <= 3) {
+    $('.button').hide();
+} else {
 $('.item-list li:nth-child(n + ' + (moreNum + 1) + ')').addClass('hidden');
 $('.button').on('click', function() {
     $('.item-list li.hidden').slice(0, moreNum).removeClass('hidden');
@@ -150,6 +104,11 @@ $('.button').on('click', function() {
     }
 });
 
+}
+
+
+var rellax = new Rellax('.rellax', {
+});
 
 
     // アコーディオンをクリックした時の動作

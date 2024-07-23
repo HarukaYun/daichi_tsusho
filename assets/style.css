@@ -335,7 +335,7 @@ section {
   font-weight: 500;
   color: #0051b0;
   letter-spacing: 0.17em;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
 }
 @media screen and (max-width: 599px) {
   .recommend_list li .cat {
@@ -786,7 +786,7 @@ section {
   font-weight: 500;
   color: #0051b0;
   letter-spacing: 0.17em;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
 }
 
 @media screen and (max-width: 599px) {
@@ -1606,7 +1606,7 @@ section {
   font-weight: 500;
   color: #0051b0;
   letter-spacing: 0.17em;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
 }
 
 @media screen and (max-width: 599px) {
@@ -2215,7 +2215,7 @@ section {
   font-weight: 500;
   color: #0051b0;
   letter-spacing: 0.17em;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
 }
 
 @media screen and (max-width: 599px) {
@@ -3302,7 +3302,7 @@ section {
   font-weight: 500;
   color: #0051b0;
   letter-spacing: 0.17em;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
 }
 
 @media screen and (max-width: 599px) {
@@ -4213,7 +4213,7 @@ section {
   font-weight: 500;
   color: #0051b0;
   letter-spacing: 0.17em;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
 }
 
 @media screen and (max-width: 599px) {
@@ -4368,8 +4368,8 @@ item-list
 #item-list .container .item_wrap .item-list li .img {
   border-radius: 0.5rem;
   overflow: hidden;
-  max-width: 30rem;
-  max-height: 30rem;
+  width: 100%;
+  height: 30rem;
   margin-bottom: 1.8rem;
 }
 #item-list .container .item_wrap .item-list li .img img {
@@ -4445,6 +4445,9 @@ item-list
   font-weight: 600;
   border-bottom: 1px solid #000;
 }
+#item-list .container .item_wrap .none {
+  padding-bottom: 10rem;
+}
 #item-list .container .item_menu {
   width: 16.5277777778vw;
   background-color: #fff;
@@ -4454,7 +4457,7 @@ item-list
   height: -moz-fit-content;
   height: fit-content;
   position: fixed;
-  top: 345px;
+  top: 360px;
   right: 6.5972222222vw;
 }
 @media screen and (max-width: 1024px) {
@@ -4502,11 +4505,8 @@ item-list
     font-size: 14px;
   }
 }
-#item-list .container .item_menu li:last-child {
-  margin-bottom: 0;
-}
-#item-list .container .item_menu li:first-child {
-  border-bottom: 1px solid;
+#item-list .container .item_menu li a.active {
+  text-decoration: underline;
 }
 
 /*************************************************
@@ -4866,7 +4866,7 @@ section {
   font-weight: 500;
   color: #0051b0;
   letter-spacing: 0.17em;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
 }
 
 @media screen and (max-width: 599px) {
@@ -5091,10 +5091,10 @@ item
   letter-spacing: 0.17em;
 }
 #item_top .item_ctn .item_ctt .item_info_top .cat {
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   color: #0051b0;
   font-weight: 500;
-  margin-bottom: 1.4rem;
+  margin-bottom: 0.5rem;
 }
 @media screen and (max-width: 599px) {
   #item_top .item_ctn .item_ctt .item_info_top .cat {
@@ -5140,14 +5140,18 @@ item
   margin-bottom: 3rem;
   font-size: 2rem;
 }
+#item_top .item_ctn .item_ctt .product-quantity form {
+  margin: auto;
+  width: 100%;
+}
 #item_top .item_ctn .item_ctt .product-quantity button {
-  width: 60px;
+  width: 50px;
 }
 #item_top .item_ctn .item_ctt .product-quantity input {
   width: 49px;
 }
 #item_top .item_ctn .item_ctt .cart_btn {
-  max-width: 350px;
+  max-width: 300px;
   margin-bottom: 7.5rem;
 }
 @media screen and (max-width: 1024px) {
@@ -5677,7 +5681,7 @@ section {
   font-weight: 500;
   color: #0051b0;
   letter-spacing: 0.17em;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
 }
 
 @media screen and (max-width: 599px) {
@@ -6106,6 +6110,52 @@ contact
 }
 
 /*************************************************
+お問い合わせ　-送信後
+*************************************************/
+.shopify-challenge__container {
+  padding: 10rem 0;
+}
+.shopify-challenge__container .shopify-challenge__message {
+  margin-bottom: 2rem;
+}
+.shopify-challenge__container form .shopify-challenge__button {
+  margin-top: 5rem !important;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 1.2rem 9rem 1.2rem 9rem;
+  border-radius: 5rem;
+  margin: 0 auto;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.contact .form__message {
+  font-size: 16px !important;
+  margin-bottom: 4rem;
+  position: sticky;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+@media screen and (max-width: 599px) {
+  .contact .form__message {
+    font-size: 14px !important;
+    text-align: left !important;
+  }
+}
+.contact .form__message svg {
+  width: 2rem;
+}
+@media screen and (max-width: 599px) {
+  .contact .form__message svg {
+    width: 5rem;
+  }
+}
+
+/*************************************************
 common-style
 *************************************************/
 * {
@@ -6462,7 +6512,7 @@ section {
   font-weight: 500;
   color: #0051b0;
   letter-spacing: 0.17em;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
 }
 
 @media screen and (max-width: 599px) {
