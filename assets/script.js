@@ -56,7 +56,7 @@ $('.about_slide').slick({
   speed: 2000,
   infinite: true,
   autoplay: true, //自動再生
-  autoplaySpeed: 1200
+  autoplaySpeed: 1000
 });
 
 });
@@ -109,6 +109,8 @@ $('.button').on('click', function() {
 
 var rellax = new Rellax('.rellax', {
 });
+
+
 
 
     // アコーディオンをクリックした時の動作

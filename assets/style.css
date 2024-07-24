@@ -3694,7 +3694,7 @@ about
 }
 #img_sec .img_ctt {
   position: absolute;
-  top: -28%;
+  top: 25%;
   left: 13.8888888889vw;
   width: 35.9027777778vw;
   border-radius: 1rem;
@@ -3702,7 +3702,7 @@ about
 }
 @media screen and (max-width: 599px) {
   #img_sec .img_ctt {
-    top: -50%;
+    top: 30%;
     width: 74.358974359vw;
   }
 }
@@ -3748,12 +3748,13 @@ about
 }
 #producer .producer_img {
   position: relative;
+  width: 100%;
 }
 #producer .producer_img .img_ctt {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate3d(0px, 0px, 0px);
+  top: 78%;
+  left: 32.1527777778vw;
   border-radius: 1rem;
   overflow: hidden;
   width: 35.9027777778vw;
@@ -3761,6 +3762,8 @@ about
 @media screen and (max-width: 599px) {
   #producer .producer_img .img_ctt {
     width: 74.358974359vw;
+    left: 11.5384615385vw;
+    top: 85%;
   }
 }
 
@@ -5261,20 +5264,6 @@ item
   }
 }
 
-#review {
-  margin-bottom: 8rem;
-}
-#review .ctn {
-  margin: 0 auto;
-  width: 100%;
-  border: 3px red solid;
-  padding: 3rem;
-  text-align: center;
-}
-#review .ctn p {
-  color: red;
-}
-
 #recommended {
   border-top: 1px solid #000;
   padding-top: 4rem;
@@ -5321,6 +5310,23 @@ item
 @media screen and (max-width: 599px) {
   #recommended .recommend_list {
     margin: 0 auto 3rem;
+  }
+}
+
+/*************************************************
+レビュー
+*************************************************/
+#judgeme_product_reviews {
+  width: 86.1111111111vw;
+  margin: 0 auto;
+  max-width: 1980px;
+  font-size: 1.6rem;
+}
+@media screen and (max-width: 1024px) {
+  #judgeme_product_reviews {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -6131,28 +6137,29 @@ contact
   color: #fff;
 }
 
-.contact .form__message {
-  font-size: 16px !important;
-  margin-bottom: 4rem;
-  position: sticky;
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
+#contact #form .p-contact_wrap .form__message {
+  font-size: 1.6rem !important;
+  margin-bottom: 2rem;
 }
-@media screen and (max-width: 599px) {
-  .contact .form__message {
-    font-size: 14px !important;
-    text-align: left !important;
-  }
-}
-.contact .form__message svg {
+#contact #form .p-contact_wrap .form__message svg {
   width: 2rem;
+  margin-bottom: 0.5rem;
 }
 @media screen and (max-width: 599px) {
-  .contact .form__message svg {
+  #contact #form .p-contact_wrap .form__message svg {
     width: 5rem;
   }
+}
+#contact #form .p-contact_wrap .form-status-list {
+  margin-bottom: 2rem;
+}
+#contact #form .p-contact_wrap .form-status-list li a {
+  font-size: 1.6rem !important;
+}
+
+.shopify-challenge__button {
+  background-color: #0051b0 !important;
+  color: #fff;
 }
 
 /*************************************************
