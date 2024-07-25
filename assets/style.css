@@ -29,7 +29,7 @@ body {
   font-family: "Zen Old Mincho", serif;
   font-style: normal;
   min-height: 100dvh;
-  background-color: #e7f8ff;
+  background-color: #e7f8ff !important;
   max-width: 1980px;
   margin: 0 auto;
 }
@@ -430,6 +430,236 @@ section {
 }
 
 /*************************************************
+検索ページ
+*************************************************/
+.template-search {
+  padding-top: 15rem !important;
+  text-align: center;
+}
+.template-search .h2 {
+  font-family: "Zen Old Mincho", serif !important;
+  margin-bottom: 6rem !important;
+}
+.template-search .search__button {
+  position: relative;
+  background-color: #fff !important;
+}
+.template-search .search__button::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url(https://cdn.shopify.com/s/files/1/0889/2976/3630/files/icon_search_bl.svg?v=1721867030);
+  background-size: contain;
+}
+
+/*************************************************
+ログインページ
+*************************************************/
+.customer {
+  padding-top: 15rem !important;
+  padding-bottom: 10rem !important;
+}
+.customer h1 {
+  font-family: "Zen Old Mincho", serif;
+  font-size: 2rem !important;
+}
+.customer #login {
+  font-size: 1.6rem;
+}
+.customer h1 {
+  font-size: 1.6rem;
+}
+.customer h2 {
+  font-size: 14px;
+}
+.customer .customer__title {
+  font-size: 1.6rem;
+}
+.customer .field::after {
+  box-shadow: none;
+}
+.customer .form__message {
+  font-size: 1.6rem !important;
+  margin-bottom: 1.5rem;
+}
+.customer ul li {
+  font-size: 1.6rem;
+}
+.customer button {
+  background-color: #0051b0;
+  border-radius: 5rem;
+  min-width: 300px;
+}
+@media screen and (max-width: 599px) {
+  .customer button {
+    min-width: auto;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.customer button::after {
+  box-shadow: none;
+}
+.customer button:hover {
+  opacity: 0.8;
+  transition: 1s;
+}
+.customer button:hover::after {
+  box-shadow: none;
+}
+
+/*************************************************
+カート
+*************************************************/
+cart-items {
+  padding-top: 15rem !important;
+  width: 86.1111111111vw;
+  margin: 0 auto;
+  max-width: 1182px;
+  background-color: transparent !important;
+  padding-bottom: 30rem;
+  font-size: 1.6rem;
+}
+@media screen and (max-width: 599px) {
+  cart-items {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 120px !important;
+  }
+}
+cart-items h1 {
+  font-family: "Zen Old Mincho", serif;
+}
+cart-items .title-wrapper-with-link {
+  margin-bottom: 4rem;
+}
+cart-items .title-wrapper-with-link a {
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.5rem;
+}
+cart-items .cart__items thead th {
+  font-size: 1.4rem;
+}
+cart-items .cart__items .cart-item__totals .price {
+  position: relative;
+}
+cart-items .cart__items .cart-item__totals .price::after {
+  content: "￥";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 60px;
+}
+cart-items .cart__items .cart-item__details a {
+  font-family: "Zen Old Mincho", serif !important;
+}
+cart-items .cart__items .cart-item__details .product-option {
+  position: relative;
+}
+cart-items .cart__items .cart-item__details .product-option:nth-child(2) {
+  margin-left: 15px;
+}
+cart-items .cart__items .cart-item__details .product-option:nth-child(2)::after {
+  content: "￥";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -15px;
+}
+
+.cart__footer-wrapper {
+  width: 86.1111111111vw;
+  margin: 0 auto 8rem;
+  max-width: 1182px;
+}
+@media screen and (max-width: 599px) {
+  .cart__footer-wrapper {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 50px !important;
+  }
+}
+.cart__footer-wrapper .totals__total {
+  font-family: "Zen Old Mincho", serif;
+}
+.cart__footer-wrapper .totals__total-value {
+  position: relative;
+  margin-left: 6rem;
+}
+.cart__footer-wrapper .totals__total-value::after {
+  content: "￥";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -2rem;
+}
+.cart__footer-wrapper .color-scheme-1 {
+  background-color: transparent !important;
+}
+.cart__footer-wrapper .cart__ctas {
+  justify-content: flex-end;
+}
+@media screen and (max-width: 599px) {
+  .cart__footer-wrapper .cart__ctas {
+    justify-content: center;
+  }
+}
+.cart__footer-wrapper .cart__checkout-button {
+  display: block !important;
+  background-color: #0051b0;
+  border-radius: 5rem;
+  width: 300px;
+}
+.cart__footer-wrapper .cart__checkout-button::after {
+  box-shadow: none !important;
+}
+@media screen and (max-width: 599px) {
+  .cart__footer-wrapper .cart__checkout-button {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.cart__footer-wrapper .cart__checkout-button:hover {
+  transition: 1s;
+  opacity: 0.8;
+}
+.cart__footer-wrapper .cart__checkout-button:hover::after {
+  box-shadow: none !important;
+}
+.cart__footer-wrapper .tax-note {
+  text-align: left;
+  line-height: 1.5;
+  font-size: 12px;
+  color: #000;
+}
+
+.is-empty .cart__warnings .button {
+  display: block !important;
+  background-color: #0051b0;
+  border-radius: 5rem;
+  width: 300px;
+  margin: 0 auto !important;
+  padding: 15px 0 !important;
+}
+.is-empty .cart__warnings .button::after {
+  box-shadow: none !important;
+}
+.is-empty .cart__warnings .button:hover {
+  transition: 1s;
+  opacity: 0.8;
+}
+.is-empty .cart__warnings .button:hover::after {
+  box-shadow: none !important;
+}
+
+/*************************************************
 common-style
 *************************************************/
 * {
@@ -459,7 +689,7 @@ body {
   font-family: "Zen Old Mincho", serif;
   font-style: normal;
   min-height: 100dvh;
-  background-color: #e7f8ff;
+  background-color: #e7f8ff !important;
   max-width: 1980px;
   margin: 0 auto;
 }
@@ -884,6 +1114,274 @@ section {
     display: none;
   }
 }
+/*************************************************
+検索ページ
+*************************************************/
+.template-search {
+  padding-top: 15rem !important;
+  text-align: center;
+}
+
+.template-search .h2 {
+  font-family: "Zen Old Mincho", serif !important;
+  margin-bottom: 6rem !important;
+}
+
+.template-search .search__button {
+  position: relative;
+  background-color: #fff !important;
+}
+
+.template-search .search__button::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url(https://cdn.shopify.com/s/files/1/0889/2976/3630/files/icon_search_bl.svg?v=1721867030);
+  background-size: contain;
+}
+
+/*************************************************
+ログインページ
+*************************************************/
+.customer {
+  padding-top: 15rem !important;
+  padding-bottom: 10rem !important;
+}
+
+.customer h1 {
+  font-family: "Zen Old Mincho", serif;
+  font-size: 2rem !important;
+}
+
+.customer #login {
+  font-size: 1.6rem;
+}
+
+.customer h1 {
+  font-size: 1.6rem;
+}
+
+.customer h2 {
+  font-size: 14px;
+}
+
+.customer .customer__title {
+  font-size: 1.6rem;
+}
+
+.customer .field::after {
+  box-shadow: none;
+}
+
+.customer .form__message {
+  font-size: 1.6rem !important;
+  margin-bottom: 1.5rem;
+}
+
+.customer ul li {
+  font-size: 1.6rem;
+}
+
+.customer button {
+  background-color: #0051b0;
+  border-radius: 5rem;
+  min-width: 300px;
+}
+
+@media screen and (max-width: 599px) {
+  .customer button {
+    min-width: auto;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.customer button::after {
+  box-shadow: none;
+}
+
+.customer button:hover {
+  opacity: 0.8;
+  transition: 1s;
+}
+
+.customer button:hover::after {
+  box-shadow: none;
+}
+
+/*************************************************
+カート
+*************************************************/
+cart-items {
+  padding-top: 15rem !important;
+  width: 86.1111111111vw;
+  margin: 0 auto;
+  max-width: 1182px;
+  background-color: transparent !important;
+  padding-bottom: 30rem;
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 599px) {
+  cart-items {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 120px !important;
+  }
+}
+cart-items h1 {
+  font-family: "Zen Old Mincho", serif;
+}
+
+cart-items .title-wrapper-with-link {
+  margin-bottom: 4rem;
+}
+
+cart-items .title-wrapper-with-link a {
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.5rem;
+}
+
+cart-items .cart__items thead th {
+  font-size: 1.4rem;
+}
+
+cart-items .cart__items .cart-item__totals .price {
+  position: relative;
+}
+
+cart-items .cart__items .cart-item__totals .price::after {
+  content: "￥";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 60px;
+}
+
+cart-items .cart__items .cart-item__details a {
+  font-family: "Zen Old Mincho", serif !important;
+}
+
+cart-items .cart__items .cart-item__details .product-option {
+  position: relative;
+}
+
+cart-items .cart__items .cart-item__details .product-option:nth-child(2) {
+  margin-left: 15px;
+}
+
+cart-items .cart__items .cart-item__details .product-option:nth-child(2)::after {
+  content: "￥";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -15px;
+}
+
+.cart__footer-wrapper {
+  width: 86.1111111111vw;
+  margin: 0 auto 8rem;
+  max-width: 1182px;
+}
+
+@media screen and (max-width: 599px) {
+  .cart__footer-wrapper {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 50px !important;
+  }
+}
+.cart__footer-wrapper .totals__total {
+  font-family: "Zen Old Mincho", serif;
+}
+
+.cart__footer-wrapper .totals__total-value {
+  position: relative;
+  margin-left: 6rem;
+}
+
+.cart__footer-wrapper .totals__total-value::after {
+  content: "￥";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -2rem;
+}
+
+.cart__footer-wrapper .color-scheme-1 {
+  background-color: transparent !important;
+}
+
+.cart__footer-wrapper .cart__ctas {
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 599px) {
+  .cart__footer-wrapper .cart__ctas {
+    justify-content: center;
+  }
+}
+.cart__footer-wrapper .cart__checkout-button {
+  display: block !important;
+  background-color: #0051b0;
+  border-radius: 5rem;
+  width: 300px;
+}
+
+.cart__footer-wrapper .cart__checkout-button::after {
+  box-shadow: none !important;
+}
+
+@media screen and (max-width: 599px) {
+  .cart__footer-wrapper .cart__checkout-button {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.cart__footer-wrapper .cart__checkout-button:hover {
+  transition: 1s;
+  opacity: 0.8;
+}
+
+.cart__footer-wrapper .cart__checkout-button:hover::after {
+  box-shadow: none !important;
+}
+
+.cart__footer-wrapper .tax-note {
+  text-align: left;
+  line-height: 1.5;
+  font-size: 12px;
+  color: #000;
+}
+
+.is-empty .cart__warnings .button {
+  display: block !important;
+  background-color: #0051b0;
+  border-radius: 5rem;
+  width: 300px;
+  margin: 0 auto !important;
+  padding: 15px 0 !important;
+}
+
+.is-empty .cart__warnings .button::after {
+  box-shadow: none !important;
+}
+
+.is-empty .cart__warnings .button:hover {
+  transition: 1s;
+  opacity: 0.8;
+}
+
+.is-empty .cart__warnings .button:hover::after {
+  box-shadow: none !important;
+}
+
 /*************************************************
 header
 *************************************************/
@@ -1279,7 +1777,7 @@ body {
   font-family: "Zen Old Mincho", serif;
   font-style: normal;
   min-height: 100dvh;
-  background-color: #e7f8ff;
+  background-color: #e7f8ff !important;
   max-width: 1980px;
   margin: 0 auto;
 }
@@ -1704,6 +2202,274 @@ section {
     display: none;
   }
 }
+/*************************************************
+検索ページ
+*************************************************/
+.template-search {
+  padding-top: 15rem !important;
+  text-align: center;
+}
+
+.template-search .h2 {
+  font-family: "Zen Old Mincho", serif !important;
+  margin-bottom: 6rem !important;
+}
+
+.template-search .search__button {
+  position: relative;
+  background-color: #fff !important;
+}
+
+.template-search .search__button::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url(https://cdn.shopify.com/s/files/1/0889/2976/3630/files/icon_search_bl.svg?v=1721867030);
+  background-size: contain;
+}
+
+/*************************************************
+ログインページ
+*************************************************/
+.customer {
+  padding-top: 15rem !important;
+  padding-bottom: 10rem !important;
+}
+
+.customer h1 {
+  font-family: "Zen Old Mincho", serif;
+  font-size: 2rem !important;
+}
+
+.customer #login {
+  font-size: 1.6rem;
+}
+
+.customer h1 {
+  font-size: 1.6rem;
+}
+
+.customer h2 {
+  font-size: 14px;
+}
+
+.customer .customer__title {
+  font-size: 1.6rem;
+}
+
+.customer .field::after {
+  box-shadow: none;
+}
+
+.customer .form__message {
+  font-size: 1.6rem !important;
+  margin-bottom: 1.5rem;
+}
+
+.customer ul li {
+  font-size: 1.6rem;
+}
+
+.customer button {
+  background-color: #0051b0;
+  border-radius: 5rem;
+  min-width: 300px;
+}
+
+@media screen and (max-width: 599px) {
+  .customer button {
+    min-width: auto;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.customer button::after {
+  box-shadow: none;
+}
+
+.customer button:hover {
+  opacity: 0.8;
+  transition: 1s;
+}
+
+.customer button:hover::after {
+  box-shadow: none;
+}
+
+/*************************************************
+カート
+*************************************************/
+cart-items {
+  padding-top: 15rem !important;
+  width: 86.1111111111vw;
+  margin: 0 auto;
+  max-width: 1182px;
+  background-color: transparent !important;
+  padding-bottom: 30rem;
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 599px) {
+  cart-items {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 120px !important;
+  }
+}
+cart-items h1 {
+  font-family: "Zen Old Mincho", serif;
+}
+
+cart-items .title-wrapper-with-link {
+  margin-bottom: 4rem;
+}
+
+cart-items .title-wrapper-with-link a {
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.5rem;
+}
+
+cart-items .cart__items thead th {
+  font-size: 1.4rem;
+}
+
+cart-items .cart__items .cart-item__totals .price {
+  position: relative;
+}
+
+cart-items .cart__items .cart-item__totals .price::after {
+  content: "￥";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 60px;
+}
+
+cart-items .cart__items .cart-item__details a {
+  font-family: "Zen Old Mincho", serif !important;
+}
+
+cart-items .cart__items .cart-item__details .product-option {
+  position: relative;
+}
+
+cart-items .cart__items .cart-item__details .product-option:nth-child(2) {
+  margin-left: 15px;
+}
+
+cart-items .cart__items .cart-item__details .product-option:nth-child(2)::after {
+  content: "￥";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -15px;
+}
+
+.cart__footer-wrapper {
+  width: 86.1111111111vw;
+  margin: 0 auto 8rem;
+  max-width: 1182px;
+}
+
+@media screen and (max-width: 599px) {
+  .cart__footer-wrapper {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 50px !important;
+  }
+}
+.cart__footer-wrapper .totals__total {
+  font-family: "Zen Old Mincho", serif;
+}
+
+.cart__footer-wrapper .totals__total-value {
+  position: relative;
+  margin-left: 6rem;
+}
+
+.cart__footer-wrapper .totals__total-value::after {
+  content: "￥";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -2rem;
+}
+
+.cart__footer-wrapper .color-scheme-1 {
+  background-color: transparent !important;
+}
+
+.cart__footer-wrapper .cart__ctas {
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 599px) {
+  .cart__footer-wrapper .cart__ctas {
+    justify-content: center;
+  }
+}
+.cart__footer-wrapper .cart__checkout-button {
+  display: block !important;
+  background-color: #0051b0;
+  border-radius: 5rem;
+  width: 300px;
+}
+
+.cart__footer-wrapper .cart__checkout-button::after {
+  box-shadow: none !important;
+}
+
+@media screen and (max-width: 599px) {
+  .cart__footer-wrapper .cart__checkout-button {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.cart__footer-wrapper .cart__checkout-button:hover {
+  transition: 1s;
+  opacity: 0.8;
+}
+
+.cart__footer-wrapper .cart__checkout-button:hover::after {
+  box-shadow: none !important;
+}
+
+.cart__footer-wrapper .tax-note {
+  text-align: left;
+  line-height: 1.5;
+  font-size: 12px;
+  color: #000;
+}
+
+.is-empty .cart__warnings .button {
+  display: block !important;
+  background-color: #0051b0;
+  border-radius: 5rem;
+  width: 300px;
+  margin: 0 auto !important;
+  padding: 15px 0 !important;
+}
+
+.is-empty .cart__warnings .button::after {
+  box-shadow: none !important;
+}
+
+.is-empty .cart__warnings .button:hover {
+  transition: 1s;
+  opacity: 0.8;
+}
+
+.is-empty .cart__warnings .button:hover::after {
+  box-shadow: none !important;
+}
+
 /*************************************************
 footer
 *************************************************/
@@ -1888,7 +2654,7 @@ body {
   font-family: "Zen Old Mincho", serif;
   font-style: normal;
   min-height: 100dvh;
-  background-color: #e7f8ff;
+  background-color: #e7f8ff !important;
   max-width: 1980px;
   margin: 0 auto;
 }
@@ -2313,6 +3079,274 @@ section {
     display: none;
   }
 }
+/*************************************************
+検索ページ
+*************************************************/
+.template-search {
+  padding-top: 15rem !important;
+  text-align: center;
+}
+
+.template-search .h2 {
+  font-family: "Zen Old Mincho", serif !important;
+  margin-bottom: 6rem !important;
+}
+
+.template-search .search__button {
+  position: relative;
+  background-color: #fff !important;
+}
+
+.template-search .search__button::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url(https://cdn.shopify.com/s/files/1/0889/2976/3630/files/icon_search_bl.svg?v=1721867030);
+  background-size: contain;
+}
+
+/*************************************************
+ログインページ
+*************************************************/
+.customer {
+  padding-top: 15rem !important;
+  padding-bottom: 10rem !important;
+}
+
+.customer h1 {
+  font-family: "Zen Old Mincho", serif;
+  font-size: 2rem !important;
+}
+
+.customer #login {
+  font-size: 1.6rem;
+}
+
+.customer h1 {
+  font-size: 1.6rem;
+}
+
+.customer h2 {
+  font-size: 14px;
+}
+
+.customer .customer__title {
+  font-size: 1.6rem;
+}
+
+.customer .field::after {
+  box-shadow: none;
+}
+
+.customer .form__message {
+  font-size: 1.6rem !important;
+  margin-bottom: 1.5rem;
+}
+
+.customer ul li {
+  font-size: 1.6rem;
+}
+
+.customer button {
+  background-color: #0051b0;
+  border-radius: 5rem;
+  min-width: 300px;
+}
+
+@media screen and (max-width: 599px) {
+  .customer button {
+    min-width: auto;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.customer button::after {
+  box-shadow: none;
+}
+
+.customer button:hover {
+  opacity: 0.8;
+  transition: 1s;
+}
+
+.customer button:hover::after {
+  box-shadow: none;
+}
+
+/*************************************************
+カート
+*************************************************/
+cart-items {
+  padding-top: 15rem !important;
+  width: 86.1111111111vw;
+  margin: 0 auto;
+  max-width: 1182px;
+  background-color: transparent !important;
+  padding-bottom: 30rem;
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 599px) {
+  cart-items {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 120px !important;
+  }
+}
+cart-items h1 {
+  font-family: "Zen Old Mincho", serif;
+}
+
+cart-items .title-wrapper-with-link {
+  margin-bottom: 4rem;
+}
+
+cart-items .title-wrapper-with-link a {
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.5rem;
+}
+
+cart-items .cart__items thead th {
+  font-size: 1.4rem;
+}
+
+cart-items .cart__items .cart-item__totals .price {
+  position: relative;
+}
+
+cart-items .cart__items .cart-item__totals .price::after {
+  content: "￥";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 60px;
+}
+
+cart-items .cart__items .cart-item__details a {
+  font-family: "Zen Old Mincho", serif !important;
+}
+
+cart-items .cart__items .cart-item__details .product-option {
+  position: relative;
+}
+
+cart-items .cart__items .cart-item__details .product-option:nth-child(2) {
+  margin-left: 15px;
+}
+
+cart-items .cart__items .cart-item__details .product-option:nth-child(2)::after {
+  content: "￥";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -15px;
+}
+
+.cart__footer-wrapper {
+  width: 86.1111111111vw;
+  margin: 0 auto 8rem;
+  max-width: 1182px;
+}
+
+@media screen and (max-width: 599px) {
+  .cart__footer-wrapper {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 50px !important;
+  }
+}
+.cart__footer-wrapper .totals__total {
+  font-family: "Zen Old Mincho", serif;
+}
+
+.cart__footer-wrapper .totals__total-value {
+  position: relative;
+  margin-left: 6rem;
+}
+
+.cart__footer-wrapper .totals__total-value::after {
+  content: "￥";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -2rem;
+}
+
+.cart__footer-wrapper .color-scheme-1 {
+  background-color: transparent !important;
+}
+
+.cart__footer-wrapper .cart__ctas {
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 599px) {
+  .cart__footer-wrapper .cart__ctas {
+    justify-content: center;
+  }
+}
+.cart__footer-wrapper .cart__checkout-button {
+  display: block !important;
+  background-color: #0051b0;
+  border-radius: 5rem;
+  width: 300px;
+}
+
+.cart__footer-wrapper .cart__checkout-button::after {
+  box-shadow: none !important;
+}
+
+@media screen and (max-width: 599px) {
+  .cart__footer-wrapper .cart__checkout-button {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.cart__footer-wrapper .cart__checkout-button:hover {
+  transition: 1s;
+  opacity: 0.8;
+}
+
+.cart__footer-wrapper .cart__checkout-button:hover::after {
+  box-shadow: none !important;
+}
+
+.cart__footer-wrapper .tax-note {
+  text-align: left;
+  line-height: 1.5;
+  font-size: 12px;
+  color: #000;
+}
+
+.is-empty .cart__warnings .button {
+  display: block !important;
+  background-color: #0051b0;
+  border-radius: 5rem;
+  width: 300px;
+  margin: 0 auto !important;
+  padding: 15px 0 !important;
+}
+
+.is-empty .cart__warnings .button::after {
+  box-shadow: none !important;
+}
+
+.is-empty .cart__warnings .button:hover {
+  transition: 1s;
+  opacity: 0.8;
+}
+
+.is-empty .cart__warnings .button:hover::after {
+  box-shadow: none !important;
+}
+
 /*************************************************
 top
 *************************************************/
@@ -2975,7 +4009,7 @@ body {
   font-family: "Zen Old Mincho", serif;
   font-style: normal;
   min-height: 100dvh;
-  background-color: #e7f8ff;
+  background-color: #e7f8ff !important;
   max-width: 1980px;
   margin: 0 auto;
 }
@@ -3400,6 +4434,274 @@ section {
     display: none;
   }
 }
+/*************************************************
+検索ページ
+*************************************************/
+.template-search {
+  padding-top: 15rem !important;
+  text-align: center;
+}
+
+.template-search .h2 {
+  font-family: "Zen Old Mincho", serif !important;
+  margin-bottom: 6rem !important;
+}
+
+.template-search .search__button {
+  position: relative;
+  background-color: #fff !important;
+}
+
+.template-search .search__button::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url(https://cdn.shopify.com/s/files/1/0889/2976/3630/files/icon_search_bl.svg?v=1721867030);
+  background-size: contain;
+}
+
+/*************************************************
+ログインページ
+*************************************************/
+.customer {
+  padding-top: 15rem !important;
+  padding-bottom: 10rem !important;
+}
+
+.customer h1 {
+  font-family: "Zen Old Mincho", serif;
+  font-size: 2rem !important;
+}
+
+.customer #login {
+  font-size: 1.6rem;
+}
+
+.customer h1 {
+  font-size: 1.6rem;
+}
+
+.customer h2 {
+  font-size: 14px;
+}
+
+.customer .customer__title {
+  font-size: 1.6rem;
+}
+
+.customer .field::after {
+  box-shadow: none;
+}
+
+.customer .form__message {
+  font-size: 1.6rem !important;
+  margin-bottom: 1.5rem;
+}
+
+.customer ul li {
+  font-size: 1.6rem;
+}
+
+.customer button {
+  background-color: #0051b0;
+  border-radius: 5rem;
+  min-width: 300px;
+}
+
+@media screen and (max-width: 599px) {
+  .customer button {
+    min-width: auto;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.customer button::after {
+  box-shadow: none;
+}
+
+.customer button:hover {
+  opacity: 0.8;
+  transition: 1s;
+}
+
+.customer button:hover::after {
+  box-shadow: none;
+}
+
+/*************************************************
+カート
+*************************************************/
+cart-items {
+  padding-top: 15rem !important;
+  width: 86.1111111111vw;
+  margin: 0 auto;
+  max-width: 1182px;
+  background-color: transparent !important;
+  padding-bottom: 30rem;
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 599px) {
+  cart-items {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 120px !important;
+  }
+}
+cart-items h1 {
+  font-family: "Zen Old Mincho", serif;
+}
+
+cart-items .title-wrapper-with-link {
+  margin-bottom: 4rem;
+}
+
+cart-items .title-wrapper-with-link a {
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.5rem;
+}
+
+cart-items .cart__items thead th {
+  font-size: 1.4rem;
+}
+
+cart-items .cart__items .cart-item__totals .price {
+  position: relative;
+}
+
+cart-items .cart__items .cart-item__totals .price::after {
+  content: "￥";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 60px;
+}
+
+cart-items .cart__items .cart-item__details a {
+  font-family: "Zen Old Mincho", serif !important;
+}
+
+cart-items .cart__items .cart-item__details .product-option {
+  position: relative;
+}
+
+cart-items .cart__items .cart-item__details .product-option:nth-child(2) {
+  margin-left: 15px;
+}
+
+cart-items .cart__items .cart-item__details .product-option:nth-child(2)::after {
+  content: "￥";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -15px;
+}
+
+.cart__footer-wrapper {
+  width: 86.1111111111vw;
+  margin: 0 auto 8rem;
+  max-width: 1182px;
+}
+
+@media screen and (max-width: 599px) {
+  .cart__footer-wrapper {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 50px !important;
+  }
+}
+.cart__footer-wrapper .totals__total {
+  font-family: "Zen Old Mincho", serif;
+}
+
+.cart__footer-wrapper .totals__total-value {
+  position: relative;
+  margin-left: 6rem;
+}
+
+.cart__footer-wrapper .totals__total-value::after {
+  content: "￥";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -2rem;
+}
+
+.cart__footer-wrapper .color-scheme-1 {
+  background-color: transparent !important;
+}
+
+.cart__footer-wrapper .cart__ctas {
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 599px) {
+  .cart__footer-wrapper .cart__ctas {
+    justify-content: center;
+  }
+}
+.cart__footer-wrapper .cart__checkout-button {
+  display: block !important;
+  background-color: #0051b0;
+  border-radius: 5rem;
+  width: 300px;
+}
+
+.cart__footer-wrapper .cart__checkout-button::after {
+  box-shadow: none !important;
+}
+
+@media screen and (max-width: 599px) {
+  .cart__footer-wrapper .cart__checkout-button {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.cart__footer-wrapper .cart__checkout-button:hover {
+  transition: 1s;
+  opacity: 0.8;
+}
+
+.cart__footer-wrapper .cart__checkout-button:hover::after {
+  box-shadow: none !important;
+}
+
+.cart__footer-wrapper .tax-note {
+  text-align: left;
+  line-height: 1.5;
+  font-size: 12px;
+  color: #000;
+}
+
+.is-empty .cart__warnings .button {
+  display: block !important;
+  background-color: #0051b0;
+  border-radius: 5rem;
+  width: 300px;
+  margin: 0 auto !important;
+  padding: 15px 0 !important;
+}
+
+.is-empty .cart__warnings .button::after {
+  box-shadow: none !important;
+}
+
+.is-empty .cart__warnings .button:hover {
+  transition: 1s;
+  opacity: 0.8;
+}
+
+.is-empty .cart__warnings .button:hover::after {
+  box-shadow: none !important;
+}
+
 /*************************************************
 about
 *************************************************/
@@ -3889,7 +5191,7 @@ body {
   font-family: "Zen Old Mincho", serif;
   font-style: normal;
   min-height: 100dvh;
-  background-color: #e7f8ff;
+  background-color: #e7f8ff !important;
   max-width: 1980px;
   margin: 0 auto;
 }
@@ -4314,6 +5616,274 @@ section {
     display: none;
   }
 }
+/*************************************************
+検索ページ
+*************************************************/
+.template-search {
+  padding-top: 15rem !important;
+  text-align: center;
+}
+
+.template-search .h2 {
+  font-family: "Zen Old Mincho", serif !important;
+  margin-bottom: 6rem !important;
+}
+
+.template-search .search__button {
+  position: relative;
+  background-color: #fff !important;
+}
+
+.template-search .search__button::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url(https://cdn.shopify.com/s/files/1/0889/2976/3630/files/icon_search_bl.svg?v=1721867030);
+  background-size: contain;
+}
+
+/*************************************************
+ログインページ
+*************************************************/
+.customer {
+  padding-top: 15rem !important;
+  padding-bottom: 10rem !important;
+}
+
+.customer h1 {
+  font-family: "Zen Old Mincho", serif;
+  font-size: 2rem !important;
+}
+
+.customer #login {
+  font-size: 1.6rem;
+}
+
+.customer h1 {
+  font-size: 1.6rem;
+}
+
+.customer h2 {
+  font-size: 14px;
+}
+
+.customer .customer__title {
+  font-size: 1.6rem;
+}
+
+.customer .field::after {
+  box-shadow: none;
+}
+
+.customer .form__message {
+  font-size: 1.6rem !important;
+  margin-bottom: 1.5rem;
+}
+
+.customer ul li {
+  font-size: 1.6rem;
+}
+
+.customer button {
+  background-color: #0051b0;
+  border-radius: 5rem;
+  min-width: 300px;
+}
+
+@media screen and (max-width: 599px) {
+  .customer button {
+    min-width: auto;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.customer button::after {
+  box-shadow: none;
+}
+
+.customer button:hover {
+  opacity: 0.8;
+  transition: 1s;
+}
+
+.customer button:hover::after {
+  box-shadow: none;
+}
+
+/*************************************************
+カート
+*************************************************/
+cart-items {
+  padding-top: 15rem !important;
+  width: 86.1111111111vw;
+  margin: 0 auto;
+  max-width: 1182px;
+  background-color: transparent !important;
+  padding-bottom: 30rem;
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 599px) {
+  cart-items {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 120px !important;
+  }
+}
+cart-items h1 {
+  font-family: "Zen Old Mincho", serif;
+}
+
+cart-items .title-wrapper-with-link {
+  margin-bottom: 4rem;
+}
+
+cart-items .title-wrapper-with-link a {
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.5rem;
+}
+
+cart-items .cart__items thead th {
+  font-size: 1.4rem;
+}
+
+cart-items .cart__items .cart-item__totals .price {
+  position: relative;
+}
+
+cart-items .cart__items .cart-item__totals .price::after {
+  content: "￥";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 60px;
+}
+
+cart-items .cart__items .cart-item__details a {
+  font-family: "Zen Old Mincho", serif !important;
+}
+
+cart-items .cart__items .cart-item__details .product-option {
+  position: relative;
+}
+
+cart-items .cart__items .cart-item__details .product-option:nth-child(2) {
+  margin-left: 15px;
+}
+
+cart-items .cart__items .cart-item__details .product-option:nth-child(2)::after {
+  content: "￥";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -15px;
+}
+
+.cart__footer-wrapper {
+  width: 86.1111111111vw;
+  margin: 0 auto 8rem;
+  max-width: 1182px;
+}
+
+@media screen and (max-width: 599px) {
+  .cart__footer-wrapper {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 50px !important;
+  }
+}
+.cart__footer-wrapper .totals__total {
+  font-family: "Zen Old Mincho", serif;
+}
+
+.cart__footer-wrapper .totals__total-value {
+  position: relative;
+  margin-left: 6rem;
+}
+
+.cart__footer-wrapper .totals__total-value::after {
+  content: "￥";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -2rem;
+}
+
+.cart__footer-wrapper .color-scheme-1 {
+  background-color: transparent !important;
+}
+
+.cart__footer-wrapper .cart__ctas {
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 599px) {
+  .cart__footer-wrapper .cart__ctas {
+    justify-content: center;
+  }
+}
+.cart__footer-wrapper .cart__checkout-button {
+  display: block !important;
+  background-color: #0051b0;
+  border-radius: 5rem;
+  width: 300px;
+}
+
+.cart__footer-wrapper .cart__checkout-button::after {
+  box-shadow: none !important;
+}
+
+@media screen and (max-width: 599px) {
+  .cart__footer-wrapper .cart__checkout-button {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.cart__footer-wrapper .cart__checkout-button:hover {
+  transition: 1s;
+  opacity: 0.8;
+}
+
+.cart__footer-wrapper .cart__checkout-button:hover::after {
+  box-shadow: none !important;
+}
+
+.cart__footer-wrapper .tax-note {
+  text-align: left;
+  line-height: 1.5;
+  font-size: 12px;
+  color: #000;
+}
+
+.is-empty .cart__warnings .button {
+  display: block !important;
+  background-color: #0051b0;
+  border-radius: 5rem;
+  width: 300px;
+  margin: 0 auto !important;
+  padding: 15px 0 !important;
+}
+
+.is-empty .cart__warnings .button::after {
+  box-shadow: none !important;
+}
+
+.is-empty .cart__warnings .button:hover {
+  transition: 1s;
+  opacity: 0.8;
+}
+
+.is-empty .cart__warnings .button:hover::after {
+  box-shadow: none !important;
+}
+
 /*************************************************
 item-list
 *************************************************/
@@ -4542,7 +6112,7 @@ body {
   font-family: "Zen Old Mincho", serif;
   font-style: normal;
   min-height: 100dvh;
-  background-color: #e7f8ff;
+  background-color: #e7f8ff !important;
   max-width: 1980px;
   margin: 0 auto;
 }
@@ -4967,6 +6537,274 @@ section {
     display: none;
   }
 }
+/*************************************************
+検索ページ
+*************************************************/
+.template-search {
+  padding-top: 15rem !important;
+  text-align: center;
+}
+
+.template-search .h2 {
+  font-family: "Zen Old Mincho", serif !important;
+  margin-bottom: 6rem !important;
+}
+
+.template-search .search__button {
+  position: relative;
+  background-color: #fff !important;
+}
+
+.template-search .search__button::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url(https://cdn.shopify.com/s/files/1/0889/2976/3630/files/icon_search_bl.svg?v=1721867030);
+  background-size: contain;
+}
+
+/*************************************************
+ログインページ
+*************************************************/
+.customer {
+  padding-top: 15rem !important;
+  padding-bottom: 10rem !important;
+}
+
+.customer h1 {
+  font-family: "Zen Old Mincho", serif;
+  font-size: 2rem !important;
+}
+
+.customer #login {
+  font-size: 1.6rem;
+}
+
+.customer h1 {
+  font-size: 1.6rem;
+}
+
+.customer h2 {
+  font-size: 14px;
+}
+
+.customer .customer__title {
+  font-size: 1.6rem;
+}
+
+.customer .field::after {
+  box-shadow: none;
+}
+
+.customer .form__message {
+  font-size: 1.6rem !important;
+  margin-bottom: 1.5rem;
+}
+
+.customer ul li {
+  font-size: 1.6rem;
+}
+
+.customer button {
+  background-color: #0051b0;
+  border-radius: 5rem;
+  min-width: 300px;
+}
+
+@media screen and (max-width: 599px) {
+  .customer button {
+    min-width: auto;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.customer button::after {
+  box-shadow: none;
+}
+
+.customer button:hover {
+  opacity: 0.8;
+  transition: 1s;
+}
+
+.customer button:hover::after {
+  box-shadow: none;
+}
+
+/*************************************************
+カート
+*************************************************/
+cart-items {
+  padding-top: 15rem !important;
+  width: 86.1111111111vw;
+  margin: 0 auto;
+  max-width: 1182px;
+  background-color: transparent !important;
+  padding-bottom: 30rem;
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 599px) {
+  cart-items {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 120px !important;
+  }
+}
+cart-items h1 {
+  font-family: "Zen Old Mincho", serif;
+}
+
+cart-items .title-wrapper-with-link {
+  margin-bottom: 4rem;
+}
+
+cart-items .title-wrapper-with-link a {
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.5rem;
+}
+
+cart-items .cart__items thead th {
+  font-size: 1.4rem;
+}
+
+cart-items .cart__items .cart-item__totals .price {
+  position: relative;
+}
+
+cart-items .cart__items .cart-item__totals .price::after {
+  content: "￥";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 60px;
+}
+
+cart-items .cart__items .cart-item__details a {
+  font-family: "Zen Old Mincho", serif !important;
+}
+
+cart-items .cart__items .cart-item__details .product-option {
+  position: relative;
+}
+
+cart-items .cart__items .cart-item__details .product-option:nth-child(2) {
+  margin-left: 15px;
+}
+
+cart-items .cart__items .cart-item__details .product-option:nth-child(2)::after {
+  content: "￥";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -15px;
+}
+
+.cart__footer-wrapper {
+  width: 86.1111111111vw;
+  margin: 0 auto 8rem;
+  max-width: 1182px;
+}
+
+@media screen and (max-width: 599px) {
+  .cart__footer-wrapper {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 50px !important;
+  }
+}
+.cart__footer-wrapper .totals__total {
+  font-family: "Zen Old Mincho", serif;
+}
+
+.cart__footer-wrapper .totals__total-value {
+  position: relative;
+  margin-left: 6rem;
+}
+
+.cart__footer-wrapper .totals__total-value::after {
+  content: "￥";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -2rem;
+}
+
+.cart__footer-wrapper .color-scheme-1 {
+  background-color: transparent !important;
+}
+
+.cart__footer-wrapper .cart__ctas {
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 599px) {
+  .cart__footer-wrapper .cart__ctas {
+    justify-content: center;
+  }
+}
+.cart__footer-wrapper .cart__checkout-button {
+  display: block !important;
+  background-color: #0051b0;
+  border-radius: 5rem;
+  width: 300px;
+}
+
+.cart__footer-wrapper .cart__checkout-button::after {
+  box-shadow: none !important;
+}
+
+@media screen and (max-width: 599px) {
+  .cart__footer-wrapper .cart__checkout-button {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.cart__footer-wrapper .cart__checkout-button:hover {
+  transition: 1s;
+  opacity: 0.8;
+}
+
+.cart__footer-wrapper .cart__checkout-button:hover::after {
+  box-shadow: none !important;
+}
+
+.cart__footer-wrapper .tax-note {
+  text-align: left;
+  line-height: 1.5;
+  font-size: 12px;
+  color: #000;
+}
+
+.is-empty .cart__warnings .button {
+  display: block !important;
+  background-color: #0051b0;
+  border-radius: 5rem;
+  width: 300px;
+  margin: 0 auto !important;
+  padding: 15px 0 !important;
+}
+
+.is-empty .cart__warnings .button::after {
+  box-shadow: none !important;
+}
+
+.is-empty .cart__warnings .button:hover {
+  transition: 1s;
+  opacity: 0.8;
+}
+
+.is-empty .cart__warnings .button:hover::after {
+  box-shadow: none !important;
+}
+
 /*************************************************
 item
 *************************************************/
@@ -5360,7 +7198,7 @@ body {
   font-family: "Zen Old Mincho", serif;
   font-style: normal;
   min-height: 100dvh;
-  background-color: #e7f8ff;
+  background-color: #e7f8ff !important;
   max-width: 1980px;
   margin: 0 auto;
 }
@@ -5785,6 +7623,274 @@ section {
     display: none;
   }
 }
+/*************************************************
+検索ページ
+*************************************************/
+.template-search {
+  padding-top: 15rem !important;
+  text-align: center;
+}
+
+.template-search .h2 {
+  font-family: "Zen Old Mincho", serif !important;
+  margin-bottom: 6rem !important;
+}
+
+.template-search .search__button {
+  position: relative;
+  background-color: #fff !important;
+}
+
+.template-search .search__button::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url(https://cdn.shopify.com/s/files/1/0889/2976/3630/files/icon_search_bl.svg?v=1721867030);
+  background-size: contain;
+}
+
+/*************************************************
+ログインページ
+*************************************************/
+.customer {
+  padding-top: 15rem !important;
+  padding-bottom: 10rem !important;
+}
+
+.customer h1 {
+  font-family: "Zen Old Mincho", serif;
+  font-size: 2rem !important;
+}
+
+.customer #login {
+  font-size: 1.6rem;
+}
+
+.customer h1 {
+  font-size: 1.6rem;
+}
+
+.customer h2 {
+  font-size: 14px;
+}
+
+.customer .customer__title {
+  font-size: 1.6rem;
+}
+
+.customer .field::after {
+  box-shadow: none;
+}
+
+.customer .form__message {
+  font-size: 1.6rem !important;
+  margin-bottom: 1.5rem;
+}
+
+.customer ul li {
+  font-size: 1.6rem;
+}
+
+.customer button {
+  background-color: #0051b0;
+  border-radius: 5rem;
+  min-width: 300px;
+}
+
+@media screen and (max-width: 599px) {
+  .customer button {
+    min-width: auto;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.customer button::after {
+  box-shadow: none;
+}
+
+.customer button:hover {
+  opacity: 0.8;
+  transition: 1s;
+}
+
+.customer button:hover::after {
+  box-shadow: none;
+}
+
+/*************************************************
+カート
+*************************************************/
+cart-items {
+  padding-top: 15rem !important;
+  width: 86.1111111111vw;
+  margin: 0 auto;
+  max-width: 1182px;
+  background-color: transparent !important;
+  padding-bottom: 30rem;
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 599px) {
+  cart-items {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 120px !important;
+  }
+}
+cart-items h1 {
+  font-family: "Zen Old Mincho", serif;
+}
+
+cart-items .title-wrapper-with-link {
+  margin-bottom: 4rem;
+}
+
+cart-items .title-wrapper-with-link a {
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.5rem;
+}
+
+cart-items .cart__items thead th {
+  font-size: 1.4rem;
+}
+
+cart-items .cart__items .cart-item__totals .price {
+  position: relative;
+}
+
+cart-items .cart__items .cart-item__totals .price::after {
+  content: "￥";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 60px;
+}
+
+cart-items .cart__items .cart-item__details a {
+  font-family: "Zen Old Mincho", serif !important;
+}
+
+cart-items .cart__items .cart-item__details .product-option {
+  position: relative;
+}
+
+cart-items .cart__items .cart-item__details .product-option:nth-child(2) {
+  margin-left: 15px;
+}
+
+cart-items .cart__items .cart-item__details .product-option:nth-child(2)::after {
+  content: "￥";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -15px;
+}
+
+.cart__footer-wrapper {
+  width: 86.1111111111vw;
+  margin: 0 auto 8rem;
+  max-width: 1182px;
+}
+
+@media screen and (max-width: 599px) {
+  .cart__footer-wrapper {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 50px !important;
+  }
+}
+.cart__footer-wrapper .totals__total {
+  font-family: "Zen Old Mincho", serif;
+}
+
+.cart__footer-wrapper .totals__total-value {
+  position: relative;
+  margin-left: 6rem;
+}
+
+.cart__footer-wrapper .totals__total-value::after {
+  content: "￥";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -2rem;
+}
+
+.cart__footer-wrapper .color-scheme-1 {
+  background-color: transparent !important;
+}
+
+.cart__footer-wrapper .cart__ctas {
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 599px) {
+  .cart__footer-wrapper .cart__ctas {
+    justify-content: center;
+  }
+}
+.cart__footer-wrapper .cart__checkout-button {
+  display: block !important;
+  background-color: #0051b0;
+  border-radius: 5rem;
+  width: 300px;
+}
+
+.cart__footer-wrapper .cart__checkout-button::after {
+  box-shadow: none !important;
+}
+
+@media screen and (max-width: 599px) {
+  .cart__footer-wrapper .cart__checkout-button {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.cart__footer-wrapper .cart__checkout-button:hover {
+  transition: 1s;
+  opacity: 0.8;
+}
+
+.cart__footer-wrapper .cart__checkout-button:hover::after {
+  box-shadow: none !important;
+}
+
+.cart__footer-wrapper .tax-note {
+  text-align: left;
+  line-height: 1.5;
+  font-size: 12px;
+  color: #000;
+}
+
+.is-empty .cart__warnings .button {
+  display: block !important;
+  background-color: #0051b0;
+  border-radius: 5rem;
+  width: 300px;
+  margin: 0 auto !important;
+  padding: 15px 0 !important;
+}
+
+.is-empty .cart__warnings .button::after {
+  box-shadow: none !important;
+}
+
+.is-empty .cart__warnings .button:hover {
+  transition: 1s;
+  opacity: 0.8;
+}
+
+.is-empty .cart__warnings .button:hover::after {
+  box-shadow: none !important;
+}
+
 /*************************************************
 faq / contact
 *************************************************/
@@ -6153,6 +8259,11 @@ contact
 #contact #form .p-contact_wrap .form-status-list {
   margin-bottom: 2rem;
 }
+@media screen and (max-width: 599px) {
+  #contact #form .p-contact_wrap .form-status-list {
+    display: flex;
+  }
+}
 #contact #form .p-contact_wrap .form-status-list li a {
   font-size: 1.6rem !important;
 }
@@ -6192,7 +8303,7 @@ body {
   font-family: "Zen Old Mincho", serif;
   font-style: normal;
   min-height: 100dvh;
-  background-color: #e7f8ff;
+  background-color: #e7f8ff !important;
   max-width: 1980px;
   margin: 0 auto;
 }
@@ -6617,6 +8728,274 @@ section {
     display: none;
   }
 }
+/*************************************************
+検索ページ
+*************************************************/
+.template-search {
+  padding-top: 15rem !important;
+  text-align: center;
+}
+
+.template-search .h2 {
+  font-family: "Zen Old Mincho", serif !important;
+  margin-bottom: 6rem !important;
+}
+
+.template-search .search__button {
+  position: relative;
+  background-color: #fff !important;
+}
+
+.template-search .search__button::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url(https://cdn.shopify.com/s/files/1/0889/2976/3630/files/icon_search_bl.svg?v=1721867030);
+  background-size: contain;
+}
+
+/*************************************************
+ログインページ
+*************************************************/
+.customer {
+  padding-top: 15rem !important;
+  padding-bottom: 10rem !important;
+}
+
+.customer h1 {
+  font-family: "Zen Old Mincho", serif;
+  font-size: 2rem !important;
+}
+
+.customer #login {
+  font-size: 1.6rem;
+}
+
+.customer h1 {
+  font-size: 1.6rem;
+}
+
+.customer h2 {
+  font-size: 14px;
+}
+
+.customer .customer__title {
+  font-size: 1.6rem;
+}
+
+.customer .field::after {
+  box-shadow: none;
+}
+
+.customer .form__message {
+  font-size: 1.6rem !important;
+  margin-bottom: 1.5rem;
+}
+
+.customer ul li {
+  font-size: 1.6rem;
+}
+
+.customer button {
+  background-color: #0051b0;
+  border-radius: 5rem;
+  min-width: 300px;
+}
+
+@media screen and (max-width: 599px) {
+  .customer button {
+    min-width: auto;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.customer button::after {
+  box-shadow: none;
+}
+
+.customer button:hover {
+  opacity: 0.8;
+  transition: 1s;
+}
+
+.customer button:hover::after {
+  box-shadow: none;
+}
+
+/*************************************************
+カート
+*************************************************/
+cart-items {
+  padding-top: 15rem !important;
+  width: 86.1111111111vw;
+  margin: 0 auto;
+  max-width: 1182px;
+  background-color: transparent !important;
+  padding-bottom: 30rem;
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 599px) {
+  cart-items {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 120px !important;
+  }
+}
+cart-items h1 {
+  font-family: "Zen Old Mincho", serif;
+}
+
+cart-items .title-wrapper-with-link {
+  margin-bottom: 4rem;
+}
+
+cart-items .title-wrapper-with-link a {
+  border-bottom: 1px solid #000;
+  padding-bottom: 0.5rem;
+}
+
+cart-items .cart__items thead th {
+  font-size: 1.4rem;
+}
+
+cart-items .cart__items .cart-item__totals .price {
+  position: relative;
+}
+
+cart-items .cart__items .cart-item__totals .price::after {
+  content: "￥";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 60px;
+}
+
+cart-items .cart__items .cart-item__details a {
+  font-family: "Zen Old Mincho", serif !important;
+}
+
+cart-items .cart__items .cart-item__details .product-option {
+  position: relative;
+}
+
+cart-items .cart__items .cart-item__details .product-option:nth-child(2) {
+  margin-left: 15px;
+}
+
+cart-items .cart__items .cart-item__details .product-option:nth-child(2)::after {
+  content: "￥";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -15px;
+}
+
+.cart__footer-wrapper {
+  width: 86.1111111111vw;
+  margin: 0 auto 8rem;
+  max-width: 1182px;
+}
+
+@media screen and (max-width: 599px) {
+  .cart__footer-wrapper {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 50px !important;
+  }
+}
+.cart__footer-wrapper .totals__total {
+  font-family: "Zen Old Mincho", serif;
+}
+
+.cart__footer-wrapper .totals__total-value {
+  position: relative;
+  margin-left: 6rem;
+}
+
+.cart__footer-wrapper .totals__total-value::after {
+  content: "￥";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -2rem;
+}
+
+.cart__footer-wrapper .color-scheme-1 {
+  background-color: transparent !important;
+}
+
+.cart__footer-wrapper .cart__ctas {
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 599px) {
+  .cart__footer-wrapper .cart__ctas {
+    justify-content: center;
+  }
+}
+.cart__footer-wrapper .cart__checkout-button {
+  display: block !important;
+  background-color: #0051b0;
+  border-radius: 5rem;
+  width: 300px;
+}
+
+.cart__footer-wrapper .cart__checkout-button::after {
+  box-shadow: none !important;
+}
+
+@media screen and (max-width: 599px) {
+  .cart__footer-wrapper .cart__checkout-button {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.cart__footer-wrapper .cart__checkout-button:hover {
+  transition: 1s;
+  opacity: 0.8;
+}
+
+.cart__footer-wrapper .cart__checkout-button:hover::after {
+  box-shadow: none !important;
+}
+
+.cart__footer-wrapper .tax-note {
+  text-align: left;
+  line-height: 1.5;
+  font-size: 12px;
+  color: #000;
+}
+
+.is-empty .cart__warnings .button {
+  display: block !important;
+  background-color: #0051b0;
+  border-radius: 5rem;
+  width: 300px;
+  margin: 0 auto !important;
+  padding: 15px 0 !important;
+}
+
+.is-empty .cart__warnings .button::after {
+  box-shadow: none !important;
+}
+
+.is-empty .cart__warnings .button:hover {
+  transition: 1s;
+  opacity: 0.8;
+}
+
+.is-empty .cart__warnings .button:hover::after {
+  box-shadow: none !important;
+}
+
 /*************************************************
 company / transaction / policy
 *************************************************/
