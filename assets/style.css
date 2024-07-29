@@ -392,8 +392,7 @@ input[type=button]:focus {
 .recommend_wrap .simplebar-scrollbar {
   height: 6px;
   background: #3f3b3a;
-  border-radius: 14px 0 0 14px;
-  top: 0;
+  top: 0 !important;
 }
 
 .recommend_list {
@@ -1085,8 +1084,7 @@ input[type=button]:focus {
 .recommend_wrap .simplebar-scrollbar {
   height: 6px;
   background: #3f3b3a;
-  border-radius: 14px 0 0 14px;
-  top: 0;
+  top: 0 !important;
 }
 
 .recommend_list {
@@ -2182,8 +2180,7 @@ input[type=button]:focus {
 .recommend_wrap .simplebar-scrollbar {
   height: 6px;
   background: #3f3b3a;
-  border-radius: 14px 0 0 14px;
-  top: 0;
+  top: 0 !important;
 }
 
 .recommend_list {
@@ -3068,8 +3065,7 @@ input[type=button]:focus {
 .recommend_wrap .simplebar-scrollbar {
   height: 6px;
   background: #3f3b3a;
-  border-radius: 14px 0 0 14px;
-  top: 0;
+  top: 0 !important;
 }
 
 .recommend_list {
@@ -4446,8 +4442,7 @@ input[type=button]:focus {
 .recommend_wrap .simplebar-scrollbar {
   height: 6px;
   background: #3f3b3a;
-  border-radius: 14px 0 0 14px;
-  top: 0;
+  top: 0 !important;
 }
 
 .recommend_list {
@@ -5642,8 +5637,7 @@ input[type=button]:focus {
 .recommend_wrap .simplebar-scrollbar {
   height: 6px;
   background: #3f3b3a;
-  border-radius: 14px 0 0 14px;
-  top: 0;
+  top: 0 !important;
 }
 
 .recommend_list {
@@ -6577,8 +6571,7 @@ input[type=button]:focus {
 .recommend_wrap .simplebar-scrollbar {
   height: 6px;
   background: #3f3b3a;
-  border-radius: 14px 0 0 14px;
-  top: 0;
+  top: 0 !important;
 }
 
 .recommend_list {
@@ -7673,8 +7666,7 @@ input[type=button]:focus {
 .recommend_wrap .simplebar-scrollbar {
   height: 6px;
   background: #3f3b3a;
-  border-radius: 14px 0 0 14px;
-  top: 0;
+  top: 0 !important;
 }
 
 .recommend_list {
@@ -8761,8 +8753,7 @@ input[type=button]:focus {
 .recommend_wrap .simplebar-scrollbar {
   height: 6px;
   background: #3f3b3a;
-  border-radius: 14px 0 0 14px;
-  top: 0;
+  top: 0 !important;
 }
 
 .recommend_list {
