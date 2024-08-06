@@ -69,9 +69,9 @@
     <dt>賞味期限</dt>
     <dd>{{ product.metafields.custom._best-before }}</dd>
   {% endif %}
-  {% if product.metafields.custom._material != empty %}
+  {% if product.metafields.custom.__material != empty %}
     <dt>原材料</dt>
-    <dd>{{ product.metafields.custom._material }}</dd>
+    <dd>{{ product.metafields.custom.__material }}</dd>
   {% endif %}
   {% if product.metafields.custom._argen != empty %}
     <dt>アレルゲン</dt>
